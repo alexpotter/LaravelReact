@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { AppContainer } from 'react-hot-loader'
 import ReactDOM from 'react-dom'
-import App from 'src/App'
+import App from 'admin/App'
 
 const render = (Component) => {
     const node = document.getElementById('react-root')
@@ -22,7 +22,7 @@ render(App)
 // $FlowFixMe
 if (module.hot) {
 // $FlowFixMe - No definition for module.hot
-    module.hot.accept('./index', () => {
+    module.hot.accept('./admin', () => {
         render(App)
     })
 }

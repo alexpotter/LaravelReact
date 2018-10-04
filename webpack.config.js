@@ -6,7 +6,8 @@ const isProduction = process.env.NODE_ENV === 'production'
 config = {
     mode: isProduction ? 'production' : 'development',
     entry: {
-        app: ['react-hot-loader/patch', './resources/react/index.js'],
+        app: ['react-hot-loader/patch', './resources/react/app.js'],
+        admin: ['react-hot-loader/patch', './resources/react/admin.js'],
     },
     output: {
         path: path.resolve(__dirname, 'public/assets'),
@@ -16,7 +17,11 @@ config = {
         filename: '[name].js',
     },
     resolve: {
-        modules: ['node_modules', path.resolve(__dirname, 'client')],
+        modules: ['node_modules'],
+        alias: {
+            admin: path.resolve(__dirname, 'client/admin'),
+            app: path.resolve(__dirname, 'client/app'),
+        }
     },
     module: {
         rules: [
