@@ -1,0 +1,21 @@
+
+{
+    "extends": ["plugin:prettier/recommended"],
+    "parser": "babel-eslint",
+    "rules": {
+        "react/require-default-props": 0,
+        "flowtype/space-after-type-colon": 0,
+
+        // jsx-a11y
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "jsx-a11y/label-has-for": 0,
+        "jsx-a11y/media-has-caption": 0,
+        "react/jsx-indent": 0,
+
+        // Allow devDependencies in *.test.js files
+        // "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js"]}]
+    }
+}

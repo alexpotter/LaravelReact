@@ -43,4 +43,15 @@ config = {
     }
 }
 
+if (!isProduction) {
+    config.module.rules.unshift({
+        test: /\.js$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        use: {
+            loader: 'eslint-loader',
+        },
+    })
+}
+
 module.exports = config
