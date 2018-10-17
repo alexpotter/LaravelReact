@@ -1,10 +1,6 @@
-//@flow
+// @flow
 import * as React from 'react'
 
-class App extends React.Component {
-    render() {
-        return <div>Admin</div>
-    }
-}
+const App = () => <div>Shining Stars Admin</div>
 
 export default App
