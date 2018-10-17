@@ -7,13 +7,13 @@ keys:
     - ~/.ssh/id_rsa
 folders:
     -
-        map: ~/Path/To/ShiningStarsReact
+        map: ~/Path/To/Project
         to: /home/vagrant/code
 sites:
     -
         map: shiningstars.test
         to: /home/vagrant/code/public
 databases:
-    - shining_stars
-name: shiningstarsreact
-hostname: shiningstarsreact
+    - homestead
+name: homestead
+hostname: homestead
