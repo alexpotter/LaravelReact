@@ -1,3 +1,4 @@
+// @flow
 import * as React from 'react'
 
 const Contact = () => <div>Contact</div>
