@@ -1,6 +1,6 @@
 //@flow
 import * as React from 'react'
-import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 import Home from 'app/Home'
 import Contact from 'app/Contact'
 

@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import ESLintPlugin from 'eslint-webpack-plugin'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -67,17 +68,13 @@ const config = {
             }
         ]
     },
+		plugins: [],
 }
 
 if (!isProduction) {
-    // config.module.rules.unshift({
-    //     test: /\.js$/,
-    //     exclude: /node_modules/,
-    //     enforce: 'pre',
-    //     use: {
-    //         loader: 'eslint-loader',
-    //     },
-    // })
+		config.plugins.unshift(new ESLintPlugin({
+				extensions: 'tsx',
+		}))
 }
 
 export default config
