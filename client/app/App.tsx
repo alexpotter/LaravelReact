@@ -1,6 +1,6 @@
 //@flow
 import * as React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 import Home from 'app/Home'
 import Contact from 'app/Contact'
 
@@ -16,8 +16,10 @@ const App = () => (
 				</li>
 			</ul>
 
-			<Route exact path="/" component={Home} />
-			<Route exact path="/contact" component={Contact} />
+			<Routes>
+				<Route path="/" Component={Home} />
+				<Route path="/contact" Component={Contact} />
+			</Routes>
 		</div>
 	</Router>
 )
